@@ -133,7 +133,8 @@
 }
 .topbar__track{
   display:flex; gap:44px; width:max-content;
-  padding:9px 22px;
+  padding:9px 22px 9px 22px;
+  padding-right:66px;
   animation:slide-left 38s linear infinite;
 }
 .topbar__track span{ white-space:nowrap; }
@@ -327,7 +328,7 @@
 }
 .marquee__track{
   display:flex; align-items:center; gap:30px; width:max-content;
-  padding:15px 0;
+  padding:15px 30px 15px 0;
   font-family:var(--font-display); font-size:1.05rem; letter-spacing:.04em;
   color:var(--ink-2);
   animation:slide-left 34s linear infinite;
