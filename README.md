@@ -15,7 +15,9 @@ Everything is hand‑written HTML, CSS and vanilla JS, so it deploys free on Ver
 | `index.html` | All content + structured data (JSON‑LD) for the four outlets |
 | `assets/css/style.css` | Design system, layout, animations, responsive rules |
 | `assets/js/main.js` | Nav, scroll reveal, scroll‑spy, FAQ, WhatsApp cake‑enquiry builder |
-| `assets/img/` | Hero + 4 signature cake photos, daily counter photo, favicon |
+| `assets/img/` | Hero + 4 signature cake photos, daily counter photo |
+| `assets/brand/` | HD logo files, favicons and app icons (see its own README) |
+| `site.webmanifest` | PWA/app icon manifest |
 | `vercel.json` | Static hosting config (clean URLs, caching, basic security headers) |
 | `robots.txt`, `sitemap.xml` | SEO basics |
 
@@ -59,6 +61,9 @@ build required.
 
 Replace `919587274379` with any other outlet's number (`91` + 10 digits, no `+` or spaces).
 
+**Logo** — the header and footer use `assets/brand/santosh-bakers-logo-mark.png`.
+All logo sizes, transparency notes and usage rules live in `assets/brand/README.md`.
+
 **Photos** — drop a new image into `assets/img/` with the same filename to replace
 one, or update the `src` in `index.html`. Recommended: 1400 × 933 px, JPEG, under 250 KB.
 
@@ -82,6 +87,23 @@ update both `href="https://kotalabs.xyz"` links when the real URL is ready.
 
 **Canonical / sitemap domain** — currently `https://santoshbakers.in/`. Update
 `<link rel="canonical">`, `sitemap.xml` and `robots.txt` once the domain is final.
+
+---
+
+## Responsive behaviour
+
+| Viewport | Layout |
+| --- | --- |
+| ≥ 1101 px (laptop, desktop) | Full nav row, hero split in two columns, 4-up cake grid, 2-up outlets |
+| ≤ 1100 px (tablet landscape) | Nav collapses into a burger drawer under the header; hero still 2-up above 980 px |
+| ≤ 980 px (tablet portrait) | Hero, section headings, menu, cake builder, story and FAQs stack to one column |
+| ≤ 820 px | Footer drops to two columns |
+| ≤ 640 px (phones) | 1-up cakes and outlets, full-width CTAs, Swiggy/Zomato pills share the row |
+| ≤ 520 / 380 / 360 px | Smaller logo and type, call icon hidden, hero stats tightened — the header never overflows |
+
+Header lockup width, hero headline, hero stats and the app buttons were checked with the
+real Fraunces/Manrope font metrics at 320, 360, 390, 430, 480, 520, 640, 768, 834, 1024,
+1100, 1280, 1440 and 1920 px — all fit inside the content width at every step.
 
 ---
 

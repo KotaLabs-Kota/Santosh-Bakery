@@ -36,7 +36,7 @@
 
 /* ---------- Reset ---------- */
  *,*::before,*::after{ box-sizing:border-box; }
- html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:96px; }
+ html{ -webkit-text-size-adjust:100%; scroll-behavior:smooth; scroll-padding-top:112px; }
  body{
    margin:0;
    background:var(--cream);
@@ -182,24 +182,25 @@
 }
 .header__inner{
   display:flex; align-items:center; justify-content:space-between; gap:24px;
-  min-height:78px;
+  min-height:92px;
 }
 
 /* Brand */
-.brand{ display:inline-flex; align-items:center; gap:12px; }
-.brand__mark{
-  width:44px; height:44px; flex:none; color:var(--gold-deep);
-  display:grid; place-items:center;
+.brand{ display:inline-flex; align-items:center; gap:14px; }
+.brand__logo{
+  height:clamp(48px, 4.8vw, 64px); width:auto; flex:none; display:block;
+  filter:drop-shadow(0 8px 16px rgba(42,26,16,.18));
+  transition:transform .4s var(--ease);
 }
-.brand__mark svg{ width:100%; height:100%; }
+.brand:hover .brand__logo{ transform:rotate(-3deg) scale(1.04); }
 .brand__text{ display:flex; flex-direction:column; line-height:1.05; }
 .brand__name{
   font-family:var(--font-display);
-  font-size:1.32rem; font-weight:600; letter-spacing:-.01em;
+  font-size:1.42rem; font-weight:600; letter-spacing:-.01em;
 }
 .brand__sub{
   font-size:.6rem; font-weight:700; letter-spacing:.22em; text-transform:uppercase;
-  color:var(--ink-soft); margin-top:4px;
+  color:var(--ink-soft); margin-top:5px;
 }
 
 /* Nav */
@@ -289,7 +290,7 @@
 .hero__apps .order-tab svg{ width:18px; height:18px; }
 
 .hero__facts{
-  display:flex; gap:clamp(22px,4vw,48px);
+  display:flex; flex-wrap:wrap; gap:clamp(22px,4vw,48px);
   padding-top:26px; border-top:1px solid var(--line);
 }
 .hero__facts li{ display:flex; flex-direction:column; gap:2px; }
@@ -554,7 +555,7 @@
 }
 .optional{ text-transform:none; letter-spacing:.02em; font-weight:500; opacity:.75; }
 .field input, .field select{
-  width:100%;
+  width:100%; min-width:0;
   padding:13px 15px;
   background:rgba(12,8,5,.45);
   border:1px solid rgba(251,246,236,.16);
@@ -768,7 +769,8 @@
   gap:clamp(26px,4vw,54px);
   padding-bottom:clamp(38px,4vw,54px);
 }
-.brand--footer .brand__name{ font-size:1.4rem; }
+.brand--footer .brand__logo{ height:clamp(64px, 5.4vw, 80px); }
+.brand--footer .brand__name{ font-size:1.5rem; }
 .footer__tagline{
   margin:20px 0 22px; font-size:.88rem; color:var(--ink-soft); line-height:1.75; max-width:34ch;
 }
@@ -917,9 +919,9 @@ html.js .reveal.is-visible{ opacity:1; transform:none; }
   .footer__col--wide h3{ width:100%; }
 }
 
-@media (max-width:940px){
+@media (max-width:1100px){
   .nav{
-    position:fixed; inset:auto 0 auto 0; top:78px;
+    position:absolute; top:100%; left:0; right:0;
     flex-direction:column; align-items:stretch; gap:2px;
     background:var(--cream);
     border-bottom:1px solid var(--line);
@@ -936,7 +938,10 @@ html.js .reveal.is-visible{ opacity:1; transform:none; }
   .header__actions .btn--primary span{ display:none; }
   .header__actions .btn--primary{ width:44px; height:44px; padding:0; }
   .header__actions .btn--primary svg{ width:20px; height:20px; }
+  .header__actions{ gap:6px; }
+}
 
+@media (max-width:980px){
   .hero__grid{ grid-template-columns:1fr; }
   .hero__media{ max-width:520px; margin-inline:auto; width:100%; }
   .hero__title{ font-size:clamp(2.7rem,9vw,4rem); }
@@ -959,23 +964,35 @@ html.js .reveal.is-visible{ opacity:1; transform:none; }
   .kotalabs__cta{ width:100%; }
 }
 
+@media (max-width:820px){
+  .footer__grid{ grid-template-columns:1fr 1fr; }
+  .footer__brand{ grid-column:1 / -1; }
+  .footer__col--wide{ grid-column:1 / -1; }
+  .story__stats{ gap:14px; }
+  .menu__img{ aspect-ratio:16/9; }
+}
+
 @media (max-width:640px){
   body{ font-size:16px; }
+  .hero__facts{ gap:12px; }
+  .hero__facts span{ font-size:.64rem; letter-spacing:.06em; }
   .topbar__track{ font-size:.62rem; gap:30px; }
   .hero__apps{ gap:10px; }
   .hero__apps-label{ flex-basis:100%; font-size:.6rem; margin-bottom:2px; }
   .hero__apps .order-tab{ flex:1 1 0; justify-content:center; padding:15px 14px; font-size:.88rem; }
-  .header__inner{ min-height:70px; }
-  .nav{ top:70px; }
-  html{ scroll-padding-top:84px; }
+  .header__inner{ min-height:76px; }
+  html{ scroll-padding-top:92px; }
 
   .hero{ padding-top:28px; }
   .hero__cta{ gap:10px; }
   .hero__cta .btn{ width:100%; }
-  .hero__facts{ justify-content:space-between; gap:14px; }
-  .hero__facts strong{ font-size:1.45rem; }
-  .brand__name{ font-size:1.12rem; }
-  .brand__mark{ width:38px; height:38px; }
+  .hero__facts{ justify-content:space-between; gap:10px; }
+  .hero__facts strong{ font-size:1.4rem; }
+  .hero__facts span{ font-size:.58rem; letter-spacing:.05em; }
+  .brand{ gap:10px; }
+  .brand__logo{ height:50px; }
+  .brand__name{ font-size:1.16rem; }
+  .brand__sub{ font-size:.54rem; letter-spacing:.18em; }
 
   .badge--price{ left:-2px; top:8%; padding:11px 14px; }
   .badge__value{ font-size:1.6rem; }
@@ -1010,6 +1027,37 @@ html.js .reveal.is-visible{ opacity:1; transform:none; }
   .cta-band__actions .btn{ width:100%; }
   .faq-item summary{ font-size:.98rem; padding:18px 0; }
   .faq-item__body{ padding:0 34px 20px 0; }
+}
+
+/* very small phones — keep the header on one line */
+@media (max-width:520px){
+  .header__inner{ gap:10px; }
+  .header__call{ display:none; }
+  .brand__name{ font-size:1.04rem; }
+  .brand__sub{ font-size:.5rem; letter-spacing:.16em; }
+  .brand__logo{ height:44px; }
+  .nav-toggle, .header__actions .btn--primary{ width:42px; height:42px; }
+  .brand__logo{ filter:none; }
+}
+
+@media (max-width:380px){
+  .brand__sub{ display:none; }
+  .brand__name{ font-size:1rem; }
+  .brand__logo{ height:42px; }
+  .nav-toggle, .header__actions .btn--primary{ width:40px; height:40px; }
+  .hero__facts strong{ font-size:1.3rem; }
+  .outlet__actions{ font-size:.82rem; }
+}
+
+@media (max-width:360px){
+  .hero__facts{ gap:8px; }
+  .hero__facts span{ font-size:.56rem; }
+  .brand__logo{ height:38px; }
+  .brand__name{ font-size:.95rem; }
+  .header__inner{ gap:8px; }
+  .hero__title{ font-size:2.4rem; }
+  .badge--price{ padding:9px 11px; }
+  .badge__value{ font-size:1.35rem; }
 }
 
 @media (prefers-reduced-motion:reduce){
