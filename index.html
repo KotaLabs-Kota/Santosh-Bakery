@@ -16,8 +16,11 @@
 <meta property="og:image" content="assets/img/hero-cake.jpg" />
 <meta name="twitter:card" content="summary_large_image" />
 
-<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml" />
-<link rel="apple-touch-icon" href="assets/img/favicon.svg" />
+<link rel="icon" href="assets/brand/favicon-32.png" sizes="32x32" type="image/png" />
+<link rel="icon" href="assets/brand/favicon-48.png" sizes="48x48" type="image/png" />
+<link rel="icon" href="assets/brand/favicon-96.png" sizes="96x96" type="image/png" />
+<link rel="apple-touch-icon" href="assets/brand/apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
 
 <!-- Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,7 +28,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
 <script>document.documentElement.classList.add("js");</script>
-<link rel="stylesheet" href="assets/css/style.css?v=3" />
+<link rel="stylesheet" href="assets/css/style.css?v=4" />
 </head>
 
 <body>
@@ -53,17 +56,8 @@
 <header class="site-header" id="siteHeader">
   <div class="container header__inner">
     <a class="brand" href="#home" aria-label="Santosh Bakers home">
-      <span class="brand__mark" aria-hidden="true">
-        <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <ellipse cx="32" cy="32" rx="25" ry="20" stroke="currentColor" stroke-width="2"/>
-          <ellipse cx="32" cy="32" rx="21.5" ry="16.5" stroke="currentColor" stroke-width=".7" opacity=".55"/>
-          <path d="M20 38c4-7 4-14 0-20M20 38c-2-2-4-3-6-3M20 34c-2-2-4-2.6-6-2.6M20 30c-2-1.6-3.6-2-5.4-2M20 26c-1.6-1.2-3-1.6-4.6-1.6"
-                stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity=".85"/>
-          <path d="M44 38c-4-7-4-14 0-20M44 38c2-2 4-3 6-3M44 34c2-2 4-2.6 6-2.6M44 30c2-1.6 3.6-2 5.4-2M44 26c1.6-1.2 3-1.6 4.6-1.6"
-                stroke="currentColor" stroke-width="1.1" stroke-linecap="round" opacity=".85"/>
-          <path d="M27 30l10 4-10 4 10 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </span>
+      <img class="brand__logo" src="assets/brand/santosh-bakers-logo-mark.png"
+           alt="" width="78" height="58" aria-hidden="true" fetchpriority="high" />
       <span class="brand__text">
         <span class="brand__name">Santosh Bakers</span>
         <span class="brand__sub">Kota · since 1985</span>
@@ -585,12 +579,8 @@
     <div class="footer__grid">
       <div class="footer__brand">
         <a class="brand brand--footer" href="#home">
-          <span class="brand__mark" aria-hidden="true">
-            <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <ellipse cx="32" cy="32" rx="25" ry="20" stroke="currentColor" stroke-width="2"/>
-              <path d="M27 30l10 4-10 4 10 4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
+          <img class="brand__logo brand__logo--footer" src="assets/brand/santosh-bakers-logo-mark.png"
+               alt="" width="96" height="72" aria-hidden="true" loading="lazy" />
           <span class="brand__text">
             <span class="brand__name">Santosh Bakers</span>
             <span class="brand__sub">Kota · since 1985</span>
@@ -748,6 +738,6 @@
 }
 </script>
 
-<script src="assets/js/main.js?v=3" defer></script>
+<script src="assets/js/main.js?v=4" defer></script>
 </body>
 </html>

@@ -15,7 +15,9 @@ Everything is hand‑written HTML, CSS and vanilla JS, so it deploys free on Ver
 | `index.html` | All content + structured data (JSON‑LD) for the four outlets |
 | `assets/css/style.css` | Design system, layout, animations, responsive rules |
 | `assets/js/main.js` | Nav, scroll reveal, scroll‑spy, FAQ, WhatsApp cake‑enquiry builder |
-| `assets/img/` | Hero + 4 signature cake photos, daily counter photo, favicon |
+| `assets/img/` | Hero + 4 signature cake photos, daily counter photo |
+| `assets/brand/` | HD logo files, favicons and app icons (see its own README) |
+| `site.webmanifest` | PWA/app icon manifest |
 | `vercel.json` | Static hosting config (clean URLs, caching, basic security headers) |
 | `robots.txt`, `sitemap.xml` | SEO basics |
 
@@ -58,6 +60,9 @@ build required.
 2. The `wa.me/...` links inside `index.html` (hero, cake cards, footer, floating button).
 
 Replace `919587274379` with any other outlet's number (`91` + 10 digits, no `+` or spaces).
+
+**Logo** — the header and footer use `assets/brand/santosh-bakers-logo-mark.png`.
+All logo sizes, transparency notes and usage rules live in `assets/brand/README.md`.
 
 **Photos** — drop a new image into `assets/img/` with the same filename to replace
 one, or update the `src` in `index.html`. Recommended: 1400 × 933 px, JPEG, under 250 KB.
