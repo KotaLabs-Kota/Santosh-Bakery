@@ -19,6 +19,10 @@ Everything is hand‑written HTML, CSS and vanilla JS, so it deploys free on Ver
 | `vercel.json` | Static hosting config (clean URLs, caching, basic security headers) |
 | `robots.txt`, `sitemap.xml` | SEO basics |
 
+**Order-on-apps tabs** sit directly under the hero buttons ("Order a cake" and
+"See signature cakes"): Swiggy (orange) and Zomato (red) pills that open the
+bakery's live listings, so app customers can order without hunting for a link.
+
 No npm packages, no framework, no external JS. The only network requests are
 Google Fonts (Fraunces + Manrope) and the images in `assets/img`.
 
@@ -57,6 +61,15 @@ Replace `919587274379` with any other outlet's number (`91` + 10 digits, no `+` 
 
 **Photos** — drop a new image into `assets/img/` with the same filename to replace
 one, or update the `src` in `index.html`. Recommended: 1400 × 933 px, JPEG, under 250 KB.
+
+**Swiggy / Zomato links** — the two app tabs under the hero buttons (and the links
+in the final CTA, FAQ and footer) point to:
+
+- Swiggy: `https://www.swiggy.com/city/kota/santosh-bakery-kothari-road-chawani-rest98322`
+- Zomato: `https://www.zomato.com/kota/santosh-bakers-chawani/order`
+
+Search `index.html` for `swiggy.com` / `zomato.com` to update them; also update
+`sameAs` in the JSON-LD block at the bottom of the page.
 
 **KotaLabs credit** — the bottom card links to `https://kotalabs.xyz` (placeholder);
 update both `href="https://kotalabs.xyz"` links when the real URL is ready.

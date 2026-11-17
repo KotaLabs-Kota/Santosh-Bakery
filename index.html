@@ -33,17 +33,19 @@
 
 <!-- ══════════ ANNOUNCEMENT BAR ══════════ -->
 <div class="topbar">
-  <div class="topbar__track">
-    <span>✦ 100% Eggless, always</span>
-    <span>✦ Baked fresh since 1985</span>
-    <span>✦ Menu starts from ₹30</span>
-    <span>✦ 4 outlets across Kota</span>
-    <span>✦ Same‑day pickup on ready cakes</span>
-    <span aria-hidden="true">✦ 100% Eggless, always</span>
-    <span aria-hidden="true">✦ Baked fresh since 1985</span>
-    <span aria-hidden="true">✦ Menu starts from ₹30</span>
-    <span aria-hidden="true">✦ 4 outlets across Kota</span>
-    <span aria-hidden="true">✦ Same‑day pickup on ready cakes</span>
+  <div class="topbar__marquee">
+    <div class="topbar__track">
+      <span>✦ 100% Eggless, always</span>
+      <span>✦ Baked fresh since 1985</span>
+      <span>✦ Menu starts from ₹30</span>
+      <span>✦ 4 outlets across Kota</span>
+      <span>✦ Same‑day pickup on ready cakes</span>
+      <span aria-hidden="true">✦ 100% Eggless, always</span>
+      <span aria-hidden="true">✦ Baked fresh since 1985</span>
+      <span aria-hidden="true">✦ Menu starts from ₹30</span>
+      <span aria-hidden="true">✦ 4 outlets across Kota</span>
+      <span aria-hidden="true">✦ Same‑day pickup on ready cakes</span>
+    </div>
   </div>
 </div>
 
@@ -115,6 +117,18 @@
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </a>
           <a class="btn btn--outline btn--lg" href="#cakes">See signature cakes</a>
+        </div>
+
+        <div class="hero__apps reveal" data-delay="3">
+          <span class="hero__apps-label">Order from</span>
+          <a class="order-tab order-tab--swiggy" href="https://www.swiggy.com/city/kota/santosh-bakery-kothari-road-chawani-rest98322" target="_blank" rel="noopener" aria-label="Order Santosh Bakers on Swiggy">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5.5 8h13l-1.1 12.2a1 1 0 0 1-1 .8H7.6a1 1 0 0 1-1-.8L5.5 8Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><path d="M9 8V6.4a3 3 0 0 1 6 0V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            Swiggy
+          </a>
+          <a class="order-tab order-tab--zomato" href="https://www.zomato.com/kota/santosh-bakers-chawani/order" target="_blank" rel="noopener" aria-label="Order Santosh Bakers on Zomato">
+            <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M7.5 3v6.5a2 2 0 0 0 4 0V3M9.5 9.5V21" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><path d="M17 3c-1.3 1.6-1.8 3-1.8 4.3 0 1.3.6 2.2 1.8 2.2s1.8-.9 1.8-2.2C18.8 6 18.3 4.6 17 3ZM17 9.5V21" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
+            Zomato
+          </a>
         </div>
 
         <ul class="hero__facts reveal" data-delay="4">
@@ -534,7 +548,7 @@
         </details>
         <details class="faq-item">
           <summary>Are you on Swiggy and Zomato?<span class="faq-item__icon" aria-hidden="true"></span></summary>
-          <div class="faq-item__body">Yes, selected outlets are listed on Swiggy and Zomato. Prices there can differ from counter prices, so ordering directly on WhatsApp or at the outlet usually works out cheaper.</div>
+          <div class="faq-item__body">Yes — order from <a href="https://www.swiggy.com/city/kota/santosh-bakery-kothari-road-chawani-rest98322" target="_blank" rel="noopener">Swiggy</a> or <a href="https://www.zomato.com/kota/santosh-bakers-chawani/order" target="_blank" rel="noopener">Zomato</a> (Kothari Road / Chawani listing). Prices and offers there can differ from counter prices, so ordering directly on WhatsApp or at the outlet usually works out cheaper.</div>
         </details>
       </div>
     </div>
@@ -553,6 +567,12 @@
           Order on WhatsApp
         </a>
         <a class="btn btn--outline-light btn--lg" href="tel:+919587274379">Call +91 95872 74379</a>
+        <p class="cta-band__apps">
+          or order from
+          <a href="https://www.swiggy.com/city/kota/santosh-bakery-kothari-road-chawani-rest98322" target="_blank" rel="noopener">Swiggy</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://www.zomato.com/kota/santosh-bakers-chawani/order" target="_blank" rel="noopener">Zomato</a>
+        </p>
       </div>
     </div>
   </section>
@@ -605,6 +625,8 @@
         <a href="#builder">Plan a cake</a>
         <a href="#story">Our story</a>
         <a href="#faq">FAQs</a>
+        <a href="https://www.swiggy.com/city/kota/santosh-bakery-kothari-road-chawani-rest98322" target="_blank" rel="noopener">Order on Swiggy ↗</a>
+        <a href="https://www.zomato.com/kota/santosh-bakers-chawani/order" target="_blank" rel="noopener">Order on Zomato ↗</a>
       </nav>
 
       <div class="footer__col footer__col--wide">
@@ -673,7 +695,12 @@
         "addressCountry": "IN"
       },
       "openingHours": "Mo-Su 08:00-23:30",
-      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.2", "reviewCount": "1258" }
+      "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.2", "reviewCount": "1258" },
+      "sameAs": [
+        "https://www.instagram.com/santoshbakers/",
+        "https://www.swiggy.com/city/kota/santosh-bakery-kothari-road-chawani-rest98322",
+        "https://www.zomato.com/kota/santosh-bakers-chawani/order"
+      ]
     },
     {
       "@type": "Bakery",

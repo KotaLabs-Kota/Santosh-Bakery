@@ -127,17 +127,38 @@
    Top bar
    ========================================================= */
 .topbar{
+  position:relative; z-index:95;
+  display:flex; align-items:center;
   background:var(--ink); color:rgba(251,246,236,.82);
-  font-size:.68rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
   overflow:hidden;
 }
+.topbar__marquee{
+  position:relative; flex:1 1 auto; min-width:0; overflow:hidden;
+  -webkit-mask-image:linear-gradient(90deg, #000 0, #000 calc(100% - 56px), transparent 100%);
+  mask-image:linear-gradient(90deg, #000 0, #000 calc(100% - 56px), transparent 100%);
+}
 .topbar__track{
-  display:flex; gap:44px; width:max-content;
-  padding:9px 22px 9px 22px;
+  display:flex; align-items:center; gap:44px; width:max-content;
+  padding:9px 22px;
   padding-right:66px;
+  font-size:.68rem; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
   animation:slide-left 38s linear infinite;
 }
 .topbar__track span{ white-space:nowrap; }
+
+/* App order tabs (hero) */
+.order-tab{
+  display:inline-flex; align-items:center; gap:6px;
+  padding:5px 11px; border-radius:999px;
+  font-size:.64rem; font-weight:800; letter-spacing:.1em; text-transform:uppercase;
+  color:#fff; line-height:1.35; white-space:nowrap;
+  transition:transform .22s var(--ease), filter .22s var(--ease), box-shadow .22s var(--ease);
+}
+.order-tab svg{ width:13px; height:13px; flex:none; }
+.order-tab--swiggy{ background:#FC8019; box-shadow:0 6px 16px -10px rgba(252,128,25,.9); }
+.order-tab--zomato{ background:#E23744; box-shadow:0 6px 16px -10px rgba(226,55,68,.9); }
+.order-tab:hover{ transform:translateY(-1px); filter:brightness(1.08); }
+.order-tab:focus-visible{ outline-color:#fff; }
 @keyframes slide-left{
   from{ transform:translateX(0); }
   to{ transform:translateX(-50%); }
@@ -246,7 +267,26 @@
   max-width:46ch; color:var(--ink-soft); font-size:1.03rem; line-height:1.72;
   margin-bottom:34px;
 }
-.hero__cta{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:44px; }
+.hero__cta{ display:flex; flex-wrap:wrap; gap:12px; margin-bottom:18px; }
+
+/* Swiggy / Zomato row under the hero buttons */
+.hero__apps{
+  display:flex; align-items:center; flex-wrap:wrap; gap:12px;
+  margin-bottom:40px;
+}
+.hero__apps-label{
+  font-size:.64rem; font-weight:800; letter-spacing:.2em; text-transform:uppercase;
+  color:var(--ink-soft); margin-right:2px;
+}
+/* same footprint as the .btn--lg hero buttons */
+.hero__apps .order-tab{
+  padding:16px 26px;
+  font-size:.95rem; font-weight:800;
+  line-height:1.65; letter-spacing:.01em;
+  text-transform:none;
+  gap:9px;
+}
+.hero__apps .order-tab svg{ width:18px; height:18px; }
 
 .hero__facts{
   display:flex; gap:clamp(22px,4vw,48px);
@@ -677,6 +717,12 @@
   padding:0 44px 24px 4px;
   font-size:.9rem; color:var(--ink-soft); line-height:1.75;
 }
+.faq-item__body a{
+  color:var(--gold-deep); font-weight:700;
+  text-decoration:underline; text-underline-offset:2px;
+  text-decoration-color:rgba(185,133,60,.4);
+}
+.faq-item__body a:hover{ color:var(--ink); }
 
 /* =========================================================
    CTA band
@@ -697,6 +743,17 @@
   font-size:clamp(1.8rem,3.4vw,2.9rem); line-height:1.1; letter-spacing:-.02em;
 }
 .cta-band__actions{ display:flex; flex-wrap:wrap; gap:12px; }
+.cta-band__apps{
+  flex-basis:100%; margin:4px 0 0;
+  font-size:.82rem; color:rgba(251,246,236,.55);
+}
+.cta-band__apps a{
+  color:rgba(251,246,236,.92); font-weight:700;
+  text-decoration:underline; text-underline-offset:3px;
+  text-decoration-color:rgba(251,246,236,.3);
+  transition:color .2s var(--ease), text-decoration-color .2s var(--ease);
+}
+.cta-band__apps a:hover{ color:var(--gold-2); text-decoration-color:var(--gold-2); }
 
 /* =========================================================
    Footer
@@ -905,6 +962,9 @@ html.js .reveal.is-visible{ opacity:1; transform:none; }
 @media (max-width:640px){
   body{ font-size:16px; }
   .topbar__track{ font-size:.62rem; gap:30px; }
+  .hero__apps{ gap:10px; }
+  .hero__apps-label{ flex-basis:100%; font-size:.6rem; margin-bottom:2px; }
+  .hero__apps .order-tab{ flex:1 1 0; justify-content:center; padding:15px 14px; font-size:.88rem; }
   .header__inner{ min-height:70px; }
   .nav{ top:70px; }
   html{ scroll-padding-top:84px; }
