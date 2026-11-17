@@ -271,15 +271,22 @@
 
 /* Swiggy / Zomato row under the hero buttons */
 .hero__apps{
-  display:flex; align-items:center; flex-wrap:wrap; gap:9px;
+  display:flex; align-items:center; flex-wrap:wrap; gap:12px;
   margin-bottom:40px;
 }
 .hero__apps-label{
   font-size:.64rem; font-weight:800; letter-spacing:.2em; text-transform:uppercase;
-  color:var(--ink-soft); margin-right:3px;
+  color:var(--ink-soft); margin-right:2px;
 }
-.hero__apps .order-tab{ padding:8px 15px; font-size:.68rem; gap:7px; }
-.hero__apps .order-tab svg{ width:14px; height:14px; }
+/* same footprint as the .btn--lg hero buttons */
+.hero__apps .order-tab{
+  padding:16px 26px;
+  font-size:.95rem; font-weight:800;
+  line-height:1.65; letter-spacing:.01em;
+  text-transform:none;
+  gap:9px;
+}
+.hero__apps .order-tab svg{ width:18px; height:18px; }
 
 .hero__facts{
   display:flex; gap:clamp(22px,4vw,48px);
@@ -955,7 +962,9 @@ html.js .reveal.is-visible{ opacity:1; transform:none; }
 @media (max-width:640px){
   body{ font-size:16px; }
   .topbar__track{ font-size:.62rem; gap:30px; }
-  .hero__apps-label{ font-size:.6rem; }
+  .hero__apps{ gap:10px; }
+  .hero__apps-label{ flex-basis:100%; font-size:.6rem; margin-bottom:2px; }
+  .hero__apps .order-tab{ flex:1 1 0; justify-content:center; padding:15px 14px; font-size:.88rem; }
   .header__inner{ min-height:70px; }
   .nav{ top:70px; }
   html{ scroll-padding-top:84px; }
