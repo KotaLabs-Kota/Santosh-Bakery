@@ -62,6 +62,12 @@ Replace `919587274379` with any other outlet's number (`91` + 10 digits, no `+` 
 **Photos** — drop a new image into `assets/img/` with the same filename to replace
 one, or update the `src` in `index.html`. Recommended: 1400 × 933 px, JPEG, under 250 KB.
 
+**CSS / JS cache busting** — `style.css` and `main.js` are linked with a version
+query (`style.css?v=3`). Bump that number whenever you edit either file so returning
+visitors don't keep a cached copy. Images keep a long immutable cache because their
+filenames don't change; CSS/JS are set to `max-age=0, must-revalidate` in
+`vercel.json` for the same reason.
+
 **Swiggy / Zomato links** — the two app tabs under the hero buttons (and the links
 in the final CTA, FAQ and footer) point to:
 
