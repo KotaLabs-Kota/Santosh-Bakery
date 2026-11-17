@@ -90,6 +90,23 @@ update both `href="https://kotalabs.xyz"` links when the real URL is ready.
 
 ---
 
+## Responsive behaviour
+
+| Viewport | Layout |
+| --- | --- |
+| ≥ 1101 px (laptop, desktop) | Full nav row, hero split in two columns, 4-up cake grid, 2-up outlets |
+| ≤ 1100 px (tablet landscape) | Nav collapses into a burger drawer under the header; hero still 2-up above 980 px |
+| ≤ 980 px (tablet portrait) | Hero, section headings, menu, cake builder, story and FAQs stack to one column |
+| ≤ 820 px | Footer drops to two columns |
+| ≤ 640 px (phones) | 1-up cakes and outlets, full-width CTAs, Swiggy/Zomato pills share the row |
+| ≤ 520 / 380 / 360 px | Smaller logo and type, call icon hidden, hero stats tightened — the header never overflows |
+
+Header lockup width, hero headline, hero stats and the app buttons were checked with the
+real Fraunces/Manrope font metrics at 320, 360, 390, 430, 480, 520, 640, 768, 834, 1024,
+1100, 1280, 1440 and 1920 px — all fit inside the content width at every step.
+
+---
+
 ## Run it locally
 
 ```bash

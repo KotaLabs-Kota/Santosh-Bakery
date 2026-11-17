@@ -290,7 +290,7 @@
 .hero__apps .order-tab svg{ width:18px; height:18px; }
 
 .hero__facts{
-  display:flex; gap:clamp(22px,4vw,48px);
+  display:flex; flex-wrap:wrap; gap:clamp(22px,4vw,48px);
   padding-top:26px; border-top:1px solid var(--line);
 }
 .hero__facts li{ display:flex; flex-direction:column; gap:2px; }
@@ -555,7 +555,7 @@
 }
 .optional{ text-transform:none; letter-spacing:.02em; font-weight:500; opacity:.75; }
 .field input, .field select{
-  width:100%;
+  width:100%; min-width:0;
   padding:13px 15px;
   background:rgba(12,8,5,.45);
   border:1px solid rgba(251,246,236,.16);
@@ -974,6 +974,8 @@ html.js .reveal.is-visible{ opacity:1; transform:none; }
 
 @media (max-width:640px){
   body{ font-size:16px; }
+  .hero__facts{ gap:12px; }
+  .hero__facts span{ font-size:.64rem; letter-spacing:.06em; }
   .topbar__track{ font-size:.62rem; gap:30px; }
   .hero__apps{ gap:10px; }
   .hero__apps-label{ flex-basis:100%; font-size:.6rem; margin-bottom:2px; }
@@ -984,8 +986,9 @@ html.js .reveal.is-visible{ opacity:1; transform:none; }
   .hero{ padding-top:28px; }
   .hero__cta{ gap:10px; }
   .hero__cta .btn{ width:100%; }
-  .hero__facts{ justify-content:space-between; gap:14px; }
-  .hero__facts strong{ font-size:1.45rem; }
+  .hero__facts{ justify-content:space-between; gap:10px; }
+  .hero__facts strong{ font-size:1.4rem; }
+  .hero__facts span{ font-size:.58rem; letter-spacing:.05em; }
   .brand{ gap:10px; }
   .brand__logo{ height:50px; }
   .brand__name{ font-size:1.16rem; }
@@ -1047,6 +1050,8 @@ html.js .reveal.is-visible{ opacity:1; transform:none; }
 }
 
 @media (max-width:360px){
+  .hero__facts{ gap:8px; }
+  .hero__facts span{ font-size:.56rem; }
   .brand__logo{ height:38px; }
   .brand__name{ font-size:.95rem; }
   .header__inner{ gap:8px; }
